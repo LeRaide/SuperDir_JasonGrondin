@@ -1,32 +1,14 @@
-# Prerequisites
-*.d
+# Author   LeRaide - Jason Grondin.
+# License   http://www.apache.org/licenses/LICENSE-2.0
+# Product   TWS - CPP
+# File      .gitignore
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# ===== Visual Studio =======================================================
 
-# Precompiled Headers
-*.gch
-*.pch
+/.vs/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+Debug/
+Release/
 
-# Fortran module files
-*.mod
-*.smod
+*.vcxproj.user
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
