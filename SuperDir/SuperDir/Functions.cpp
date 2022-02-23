@@ -34,22 +34,25 @@ IFileInfo** FindFiles(const char* aFolder)
 			{
 				lFiles[i] = new FileInfo_CPP;
 				
-				FileInfo_Base Init();
+				lFiles[i]->Init(aFolder,(const char*)ffd.cFileName);
 				i++;
 			}
 			else if (0 == _stricmp(".h", (const char*)ffd.cFileName + lLen - 2))
 			{
 				lFiles[i] = new FileInfo_H;
+				lFiles[i]->Init(aFolder, (const char*)ffd.cFileName);
 				i++;
 			}
 			else if (0 == _stricmp(".EXE", (const char*)ffd.cFileName + lLen - 4))
 			{
 				lFiles[i] = new FileInfo_EXE;
+				lFiles[i]->Init(aFolder, (const char*)ffd.cFileName);
 				i++;
 			}
 			else
 			{
 				lFiles[i] = new FileInfo_Other;
+				lFiles[i]->Init(aFolder, (const char*)ffd.cFileName);
 				i++;
 			}
 			
@@ -59,6 +62,10 @@ IFileInfo** FindFiles(const char* aFolder)
 	} while (FindNextFile(hFind, &ffd) != 0);
 	
 	return lFiles;
+}
+void RetrieveInformation(IFileInfo** aFiles)
+{
+
 }
 
 

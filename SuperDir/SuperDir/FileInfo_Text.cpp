@@ -1,6 +1,7 @@
 #include "FileInfo_Text.h"
 #include <cstddef>
 #include <xpolymorphic_allocator.h>
+#include <iostream>
 
 FileInfo_Text::~FileInfo_Text()
 {
@@ -8,13 +9,22 @@ FileInfo_Text::~FileInfo_Text()
 
 void FileInfo_Text::RetrieveInformation()
 {
-	FileInfo_Base* lFile;
-	char lLine[1024];
+	FILE* lFile;
+	char lFileName[1024];
 	unsigned int lLineCount = 0;
+
+	strcpy_s(lFileName, mFolder);
+	strcpy_s(lFileName, "\\");
+	strcpy_s(lFileName, mFile);
+
+	int lRet = fopen_s(&lFile, lFileName, "r");
+	char lLine[1024];
 	while (NULL != fgets(lLine, sizeof(lLine), lFile))
 	{
 		lLineCount++;
 	}
+	fclose(lFile);
+	std::cout << lLineCount << " lignes\n"; //A mettre dans le display
 }
 
 FileInfo_Text::FileInfo_Text()
