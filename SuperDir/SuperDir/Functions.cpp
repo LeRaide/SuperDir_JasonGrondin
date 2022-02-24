@@ -23,6 +23,7 @@ IFileInfo** FindFiles(const char* aFolder)
 	{
 		lFiles[i] = NULL;
 	}
+	sprintf_s(szDir, "%s\\*", aFolder);
 	hFind = FindFirstFile(szDir, &ffd);
 	unsigned int i = 0;
 	do
@@ -65,7 +66,24 @@ IFileInfo** FindFiles(const char* aFolder)
 }
 void RetrieveInformation(IFileInfo** aFiles)
 {
-
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		if (NULL != aFiles[i])
+		{
+			aFiles[i]->RetrieveInformation();
+		}
+		
+	}
+}
+void DisplayInformation(IFileInfo** aFiles)
+{
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		if (NULL != aFiles[i])
+		{
+			aFiles[i]->DisplayInformation();
+		}
+	}
 }
 
 

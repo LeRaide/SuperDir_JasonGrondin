@@ -13,7 +13,7 @@ void FileInfo_Base::Init(const char* aFolder, const char* aFile)
 	strcpy_s(mFolder, lLen + 1, aFolder);
 
 	assert(NULL != aFile);
-	unsigned int lLen = strlen(aFile);
+	lLen = strlen(aFile);
 	strcpy_s(mFile, lLen + 1, aFile);
 }
 

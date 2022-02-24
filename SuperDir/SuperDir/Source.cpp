@@ -1,6 +1,12 @@
 #include "IFileInfo.h"
+#include <xlocinfo>
 
-int main(const char* aFolder)
+IFileInfo** FindFiles(const char* aFolder);
+void RetrieveInformation(IFileInfo** aFiles);
+void DisplayInformation(IFileInfo** aFiles);
+int main(int aCount, const char** aVector)
 {
-	IFileInfo** FindFiles(const char* aFolder);
+	IFileInfo** foundFile = FindFiles(aVector[1]);
+	RetrieveInformation(foundFile);
+	DisplayInformation(foundFile);
 }

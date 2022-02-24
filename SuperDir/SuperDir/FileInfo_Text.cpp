@@ -11,7 +11,7 @@ void FileInfo_Text::RetrieveInformation()
 {
 	FILE* lFile;
 	char lFileName[1024];
-	unsigned int lLineCount = 0;
+	
 
 	strcpy_s(lFileName, mFolder);
 	strcpy_s(lFileName, "\\");
@@ -24,7 +24,6 @@ void FileInfo_Text::RetrieveInformation()
 		lLineCount++;
 	}
 	fclose(lFile);
-	std::cout << lLineCount << " lignes\n"; //A mettre dans le display
 }
 
 FileInfo_Text::FileInfo_Text()

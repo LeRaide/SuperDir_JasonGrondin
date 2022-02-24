@@ -1,13 +1,5 @@
 #include "FileInfo_CPP.h"
-class FileInfo_CPP
-{
-public:
-	
-	virtual void DisplayInformation();
-
-private:
-
-};
+#include <iostream>
 
 FileInfo_CPP::~FileInfo_CPP()
 {
@@ -15,6 +7,7 @@ FileInfo_CPP::~FileInfo_CPP()
 
 void FileInfo_CPP::DisplayInformation()
 {
+	std::cout << lLineCount << " lignes\n";
 }
 
 FileInfo_CPP::FileInfo_CPP()

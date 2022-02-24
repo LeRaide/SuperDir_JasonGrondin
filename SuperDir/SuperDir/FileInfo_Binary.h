@@ -10,7 +10,7 @@ public:
 
 protected:
     FileInfo_Binary();
-
+    unsigned int size = 0;
 };
 
 

@@ -17,8 +17,7 @@ void FileInfo_Binary::RetrieveInformation()
 
 	int lRet = fopen_s(&lFile,lFileName, "r");
 	fseek(lFile, 0, SEEK_END);
-	int size = ftell(lFile);
-	std::cout << size << " Size\n"; //A mettre dans le display
+	size = ftell(lFile);
 	fclose(lFile);
 }
 

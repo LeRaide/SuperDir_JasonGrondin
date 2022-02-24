@@ -10,5 +10,5 @@ public:
 
 protected:
     FileInfo_Text();
-
+    unsigned int lLineCount = 0;
 };
