@@ -1,13 +1,14 @@
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+# Author   LeRaide - Jason Grondin.
+# License   http://www.apache.org/licenses/LICENSE-2.0
+# Product   TWS - CPP
+# File      .gitignore
 
-# Local History for Visual Studio Code
-.history/
+# ===== Visual Studio =======================================================
 
-# Built Visual Studio Code Extensions
-*.vsix
+/.vs/
+
+Debug/
+Release/
+
+*.vcxproj.user
 
