@@ -23,7 +23,7 @@ IFileInfo** FindFiles(const char* aFolder)
 	{
 		lFiles[i] = NULL;
 	}
-	sprintf_s(szDir, "%s\\*", aFolder);
+	swprintf_s(szDir, L"%S\\*", aFolder);
 	hFind = FindFirstFile(szDir, &ffd);
 	unsigned int i = 0;
 	do
