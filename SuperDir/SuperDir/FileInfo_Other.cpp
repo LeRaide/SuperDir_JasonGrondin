@@ -3,6 +3,7 @@
 
 FileInfo_Other::~FileInfo_Other()
 {
+	delete[] mFile;
 }
 
 void FileInfo_Other::DisplayInformation()

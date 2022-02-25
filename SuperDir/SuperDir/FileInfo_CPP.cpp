@@ -3,6 +3,7 @@
 
 FileInfo_CPP::~FileInfo_CPP()
 {
+	delete[] mFile;
 }
 
 void FileInfo_CPP::DisplayInformation()

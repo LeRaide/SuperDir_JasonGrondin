@@ -3,6 +3,7 @@
 
 FileInfo_EXE::~FileInfo_EXE()
 {
+	delete[] mFile;
 }
 
 void FileInfo_EXE::DisplayInformation()

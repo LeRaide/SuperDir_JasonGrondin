@@ -1,14 +1,13 @@
-# Author   LeRaide - Jason Grondin.
-# License   http://www.apache.org/licenses/LICENSE-2.0
-# Product   TWS - CPP
-# File      .gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
-# ===== Visual Studio =======================================================
+# Local History for Visual Studio Code
+.history/
 
-/.vs/
-
-Debug/
-Release/
-
-*.vcxproj.user
+# Built Visual Studio Code Extensions
+*.vsix
 
